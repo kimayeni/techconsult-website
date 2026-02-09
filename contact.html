@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us Page</title>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <h1>MyCompany</h1>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <a href="contact.html">Get a Quote</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <h2>Contact Us</h2>
+    <p>Please fill out the form below and we'll get back to you as soon as possible.</p>
+
+    <!-- CONTACT FORM -->
+    <form action="#" method="post">
+
+      <!-- BASIC INFORMATION -->
+      <fieldset>
+        <legend>Basic Information</legend>
+
+        <label for="fullName">Full Name *</label>
+        <input type="text" id="fullName" name="fullName" placeholder="John Doe" required tabindex="1">
+
+        <label for="email">Email Address *</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email"
+          placeholder="example@email.com"
+          pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$"
+          required
+          tabindex="2"
+        >
+
+        <label for="phone">Phone Number *</label>
+        <input 
+          type="tel" 
+          id="phone" 
+          name="phone"
+          placeholder="123-456-7890"
+          pattern="^\d{3}-\d{3}-\d{4}$"
+          required
+          tabindex="3"
+        >
+
+        <label for="company">Company Name</label>
+        <input type="text" id="company" name="company" placeholder="Company Ltd" tabindex="4">
+
+        <label for="jobTitle">Job Title</label>
+        <input type="text" id="jobTitle" name="jobTitle" placeholder="Project Manager" tabindex="5">
+      </fieldset>
+
+      <!-- INQUIRY DETAILS -->
+      <fieldset>
+        <legend>Inquiry Details</legend>
+
+        <p>Inquiry Type *</p>
+        <label><input type="radio" name="inquiryType" value="general" required tabindex="6"> General Question</label>
+        <label><input type="radio" name="inquiryType" value="service"> Service Request</label>
+        <label><input type="radio" name="inquiryType" value="partnership"> Partnership Opportunity</label>
+        <label><input type="radio" name="inquiryType" value="career"> Career Inquiry</label>
+        <label><input type="radio" name="inquiryType" value="other"> Other</label>
+
+        <p>Service Interest</p>
+        <label><input type="checkbox" name="services[]" value="web"> Web Development</label>
+        <label><input type="checkbox" name="services[]" value="cloud"> Cloud Solutions</label>
+        <label><input type="checkbox" name="services[]" value="digital"> Digital Transformation</label>
+        <label><input type="checkbox" name="services[]" value="support"> IT Support</label>
+        <label><input type="checkbox" name="services[]" value="none"> None / Other</label>
+
+        <label for="budget">Budget Range *</label>
+        <select id="budget" name="budget" required tabindex="7">
+          <option value="">-- Select Budget --</option>
+          <option>Under $5,000</option>
+          <option>$5,000 - $10,000</option>
+          <option>$10,000 - $25,000</option>
+          <option>$25,000 - $50,000</option>
+          <option>$50,000+</option>
+          <option>Not Sure</option>
+        </select>
+
+        <p>Project Timeline *</p>
+        <label><input type="radio" name="timeline" required> Immediate (within 1 month)</label>
+        <label><input type="radio" name="timeline"> Short-term (1-3 months)</label>
+        <label><input type="radio" name="timeline"> Medium-term (3-6 months)</label>
+        <label><input type="radio" name="timeline"> Long-term (6+ months)</label>
+        <label><input type="radio" name="timeline"> Flexible</label>
+      </fieldset>
+
+      <!-- PROJECT DETAILS -->
+      <fieldset>
+        <legend>Project Details</legend>
+
+        <label for="description">Project Description *</label>
+        <textarea 
+          id="description" 
+          name="description"
+          placeholder="Describe your project in detail..."
+          minlength="50"
+          required
+          tabindex="8"
+        ></textarea>
+
+        <label for="requirements">Specific Requirements</label>
+        <textarea 
+          id="requirements" 
+          name="requirements"
+          placeholder="Any specific tools, features, or constraints?"
+          tabindex="9"
+        ></textarea>
+
+        <label for="files">Upload Files</label>
+        <input 
+          type="file" 
+          id="files" 
+          name="files[]" 
+          multiple
+          accept=".pdf,.doc,.docx"
+          tabindex="10"
+        >
+      </fieldset>
+
+      <!-- PREFERENCES -->
+      <fieldset>
+        <legend>Preferences</legend>
+
+        <p>Preferred Contact Method *</p>
+        <label><input type="radio" name="contactMethod" required> Email</label>
+        <label><input type="radio" name="contactMethod"> Phone</label>
+        <label><input type="radio" name="contactMethod"> Video Call</label>
+
+        <label for="bestTime">Best Time to Contact</label>
+        <input type="time" id="bestTime" name="bestTime" tabindex="11">
+
+        <label>
+          <input type="checkbox" name="newsletter">
+          Subscribe to our newsletter
+        </label>
+      </fieldset>
+
+      <!-- AGREEMENT -->
+      <fieldset>
+        <legend>Agreement</legend>
+
+        <label>
+          <input type="checkbox" name="privacy" required>
+          I agree to the <a href="privacy-policy.html">Privacy Policy</a> *
+        </label>
+      </fieldset>
+
+      <!-- FORM ACTIONS -->
+      <button type="submit" tabindex="12">Submit</button>
+      <button type="reset">Reset</button>
+
+    </form>
+
+    <!-- CONTACT INFORMATION DISPLAY -->
+    <section>
+      <h3>Our Contact Information</h3>
+
+      <p><strong>Office Address:</strong> 123 Business Avenue, Lagos, Nigeria</p>
+
+      <p><strong>Phone:</strong></p>
+      <ul>
+        <li>Sales: +234 800 123 4567</li>
+        <li>Support: +234 800 765 4321</li>
+      </ul>
+
+      <p><strong>Email:</strong></p>
+      <ul>
+        <li>sales@mycompany.com</li>
+        <li>support@mycompany.com</li>
+      </ul>
+
+      <p><strong>Office Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM</p>
+
+      <!-- Map Placeholder -->
+      <iframe 
+        src="https://maps.google.com/maps?q=lagos&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        width="100%"
+        height="300"
+        loading="lazy"
+        title="Office Location Map">
+      </iframe>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 MyCompany. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
