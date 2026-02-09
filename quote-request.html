@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quote Request</title>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <h1>MyCompany</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="quote-request.html">Request a Quote</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Detailed Quote Request</h2>
+  <p>Please provide detailed information so we can prepare an accurate quote.</p>
+
+  <!-- novalidate included intentionally -->
+  <form novalidate>
+
+    <!-- CLIENT INFORMATION -->
+    <fieldset>
+      <legend>Client Information</legend>
+
+      <label for="fullName">Full Name *</label>
+      <input type="text" id="fullName" name="fullName" required placeholder="John Doe">
+
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required
+             pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$"
+             placeholder="example@email.com">
+
+      <label for="phone">Phone Number *</label>
+      <input type="tel" id="phone" name="phone" required
+             pattern="^\d{3}-\d{3}-\d{4}$"
+             placeholder="123-456-7890">
+
+      <label for="company">Company Name</label>
+      <input type="text" id="company" name="company" placeholder="Company Ltd">
+
+      <label for="jobTitle">Job Title</label>
+      <input type="text" id="jobTitle" name="jobTitle" placeholder="Project Manager">
+
+      <label for="website">Company Website</label>
+      <input type="url" id="website" name="website" placeholder="https://example.com">
+
+      <label for="industry">Industry</label>
+      <input list="industries" id="industry" name="industry" placeholder="Select or type industry">
+
+      <datalist id="industries">
+        <option value="Technology">
+        <option value="Healthcare">
+        <option value="Finance">
+        <option value="Retail">
+        <option value="Manufacturing">
+        <option value="Education">
+        <option value="Logistics">
+        <option value="Real Estate">
+        <option value="Media">
+        <option value="Energy">
+        <option value="Hospitality">
+      </datalist>
+    </fieldset>
+
+    <!-- PROJECT SCOPE -->
+    <fieldset>
+      <legend>Project Scope</legend>
+
+      <label for="projectType">Project Type *</label>
+      <select id="projectType" name="projectType" required>
+        <option value="">-- Select Project Type --</option>
+
+        <optgroup label="Web Development">
+          <option>New Website</option>
+          <option>Website Redesign</option>
+          <option>E-commerce Site</option>
+        </optgroup>
+
+        <optgroup label="Cloud Solutions">
+          <option>Cloud Migration</option>
+          <option>Infrastructure Setup</option>
+        </optgroup>
+
+        <optgroup label="Digital Transformation">
+          <option>Process Automation</option>
+          <option>System Integration</option>
+        </optgroup>
+      </select>
+
+      <label for="pages">Number of Pages / Modules *</label>
+      <input type="number" id="pages" name="pages" min="1" max="100" required>
+
+      <p>Required Features</p>
+      <label><input type="checkbox"> User Authentication</label>
+      <label><input type="checkbox"> Payment Processing</label>
+      <label><input type="checkbox"> Admin Dashboard</label>
+      <label><input type="checkbox"> API Integration</label>
+      <label><input type="checkbox"> Reporting & Analytics</label>
+      <label><input type="checkbox"> CMS</label>
+      <label><input type="checkbox"> Search Functionality</label>
+      <label><input type="checkbox"> Notifications</label>
+      <label><input type="checkbox"> Multi-language Support</label>
+      <label><input type="checkbox"> Accessibility Compliance</label>
+
+      <p>Integration Needs</p>
+      <label><input type="checkbox"> CRM</label>
+      <label><input type="checkbox"> ERP</label>
+      <label><input type="checkbox"> Payment Gateway</label>
+      <label><input type="checkbox"> Third-party APIs</label>
+
+      <label for="customReq">Custom Requirements</label>
+      <textarea id="customReq" name="customReq"
+                placeholder="Describe any custom or unique requirements..."></textarea>
+    </fieldset>
+
+    <!-- TIMELINE & BUDGET -->
+    <fieldset>
+      <legend>Timeline & Budget</legend>
+
+      <label for="startDate">Desired Start Date *</label>
+      <input type="date" id="startDate" name="startDate" required>
+
+      <label for="endDate">Desired Completion Date *</label>
+      <input type="date" id="endDate" name="endDate" required>
+
+      <label for="budget">Estimated Budget *</label>
+      <input type="range" id="budget" name="budget"
+             min="1000" max="100000" step="1000" value="10000"
+             oninput="budgetOutput.value = '$' + this.value">
+      <output id="budgetOutput">$10000</output>
+
+      <label for="payment">Payment Preference</label>
+      <select id="payment" name="payment">
+        <option>Full Upfront</option>
+        <option>Milestone-based</option>
+        <option>Monthly</option>
+        <option>Flexible</option>
+      </select>
+    </fieldset>
+
+    <!-- ADDITIONAL DETAILS  -->
+    <fieldset>
+      <legend>Additional Details</legend>
+
+      <label for="currentTech">Current Systems / Technologies</label>
+      <textarea id="currentTech" name="currentTech"
+                placeholder="Describe current platforms or tools in use..."></textarea>
+
+      <label for="competitors">Competitors / Inspiration Websites</label>
+      <input type="text" id="competitors" name="competitors"
+             placeholder="https://example1.com, https://example2.com">
+
+      <label for="special">Special Requests</label>
+      <textarea id="special" name="special"
+                placeholder="Any additional notes or special requests..."></textarea>
+    </fieldset>
+
+    <!-- FORM ACTIONS  -->
+    <button type="submit">Submit Quote Request</button>
+    <button type="reset">Reset</button>
+
+  </form>
+</main>
+
+<footer>
+  <p>&copy; 2026 MyCompany. All rights reserved.</p>
+</footer>
+
+<!-- DATE VALIDATION SCRIPT -->
+<script>
+  const startDate = document.getElementById('startDate');
+  const endDate = document.getElementById('endDate');
+
+  const today = new Date().toISOString().split('T')[0];
+  startDate.min = today;
+
+  endDate.addEventListener('change', () => {
+    if (endDate.value <= startDate.value) {
+      alert('Completion date must be after the start date.');
+      endDate.value = '';
+    }
+  });
+</script>
+
+</body>
+</html>
