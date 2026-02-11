@@ -1,3 +1,4 @@
+
 # techconsult-website
 
 ##  Project Overview
@@ -79,4 +80,5 @@ Validation includes:
 - Completion date must be after start date
 - Budget range displays current value
 - Use of `novalidate` attribute to demonstrate understanding of custom validation
+=======
 
