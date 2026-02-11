@@ -9,20 +9,20 @@ The website includes informational pages, service descriptions, detailed forms, 
 
 ---
 
-## 📄 Page Descriptions
+##  Page Descriptions
 
-### 1️⃣ Home Page (index.html)
+###  Home Page (index.html)
 - Company introduction
 - Navigation menu
 - Call-to-action sections
 
-### 2️⃣ About Page (about.html)
+###  About Page (about.html)
 - Company history and mission
 - Team section (5 members with roles and bios)
 - Company values
 - Timeline of major milestones
 
-### 3️⃣ Services Page (services.html)
+###  Services Page (services.html)
 - Services overview
 - 4 detailed services including:
   - Description
@@ -38,7 +38,7 @@ The website includes informational pages, service descriptions, detailed forms, 
   - `<td>`
   - `scope`, `caption`, and `headers` attributes for accessibility
 
-### 4️⃣ Quote Request Page (quote-request.html)
+###  Quote Request Page (quote-request.html)
 - Advanced project quote form
 - Client information
 - Project scope selection
@@ -47,7 +47,7 @@ The website includes informational pages, service descriptions, detailed forms, 
 - Timeline validation
 - HTML5 validation implemented with `novalidate`
 
-### 5️⃣ Careers Page (careers.html)
+###  Careers Page (careers.html)
 - Why work with us section
 - 3 fictional job listings
 - Job application form including:
@@ -56,14 +56,14 @@ The website includes informational pages, service descriptions, detailed forms, 
   - Experience input
   - Salary expectations
 
-### 6️⃣ Privacy Policy Page (privacy-policy.html)
+###  Privacy Policy Page (privacy-policy.html)
 - Table of contents with anchor links
 - Proper heading hierarchy
 - Clearly structured legal sections
 
 ---
 
-## 📝 Form Functionality Documentation
+## Form Functionality Documentation
 
 All forms implement:
 
@@ -82,7 +82,7 @@ Validation includes:
 
 ---
 
-## ⚙️ Setup Instructions
+##  Setup Instructions
 
 To run this project locally:
 
