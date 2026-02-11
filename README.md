@@ -1,6 +1,6 @@
 # techconsult-website
 
-## 📖 Project Overview
+##  Project Overview
 
 This project is a multi-page corporate website built using HTML5.  
 It demonstrates structured layout design, semantic HTML usage, accessible forms, and proper Git version control workflow.
